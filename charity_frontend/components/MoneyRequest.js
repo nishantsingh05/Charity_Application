@@ -23,7 +23,7 @@ export default function MoneyRequest() {
     abi: abi,
     contractAddress: charityAddress,
     functionName: "MoneyRequest",
-    params: { amount: value },
+    params: { amount: Number(value * 1e18).toString() },
   });
 
   const handleNewNotification = () => {
